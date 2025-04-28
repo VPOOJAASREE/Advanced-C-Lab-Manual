@@ -20,34 +20,29 @@ Program:
 
 #include <stdio.h>
 
-struct eligible {
+struct Person {
     int age;
-    char name[50];
+    char name[20];
 };
 
 int main() {
-    struct eligible e[10];
-    int n, i;
-    
-    printf("Enter number of persons: ");
-    scanf("%d", &n);
-    
-    for (i = 0; i < n; i++) {
-        printf("\nEnter name: ");
-        scanf("%s", e[i].name);
-        printf("Enter age: ");
-        scanf("%d", &e[i].age);
-        
-        if (e[i].age <= 6) {
-            printf("Vaccine Eligibility: No\n");
-        } else {
-            printf("Vaccine Eligibility: Yes\n");
-        }
-        printf("Details - Name: %s, Age: %d\n", e[i].name, e[i].age);
+    struct Person p;
+
+    scanf("%d", &p.age);
+    scanf("%s", p.name);
+
+    printf("Age: %d\n", p.age);
+    printf("Name: %s vaccine: %d\n", p.name, p.age);
+
+    if (p.age > 18) {
+        printf("eligibility: yes");
+    } else {
+        printf("eligibility: no");
     }
-    
+
     return 0;
 }
+
 
 ```
 
