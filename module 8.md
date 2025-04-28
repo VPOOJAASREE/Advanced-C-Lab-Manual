@@ -51,7 +51,7 @@ int main() {
 ![6](https://github.com/user-attachments/assets/75782c67-f6cb-4ab8-8862-43dd8268724a)
 
 
-Result:
+## Result:
 Thus, the program is verified successfully.
 
 
