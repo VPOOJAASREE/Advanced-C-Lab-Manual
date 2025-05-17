@@ -1,10 +1,15 @@
+```
+NAME: V.POOJAA SREE
+REG.NO.: 212223040147
 
+```
 
-EXP NO 26: C PROGRAM TO DISPLAY STACK ELEMENTS USING LINKED LIST.
-Aim:
+## EXP NO 26: C PROGRAM TO DISPLAY STACK ELEMENTS USING LINKED LIST.
+
+### Aim:
 To write a C program to display stack elements using linked list.
 
-Algorithm:
+### Algorithm:
 1.	Define a structure Node with two members: data to store the integer value and next to point to the next node in the linked list.
 2.	Declare a global variable head representing the starting node of the linked list.
 3.	Define a function display to print the elements of the linked list.
@@ -13,34 +18,84 @@ Algorithm:
 6.	Print the data of the current node.
 7.	Move to the next node using the next pointer.
  
-Program:
+### Program:
 
-//type your code here
+```
+struct Node
+{
+   float data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void display()
+{
+    struct Node *temp = front;
+    if(front==NULL)
+    {
+        printf("queue is empty\n");
+        return;
+    }
+    printf("Queue elements:\n");
+    while(temp!=NULL)
+    {
+        printf("%.3f\n",temp->data);
+        temp=temp->next;
+    }
+    
+    
+    
+    
+    
+}
 
-Output:
+```
 
-//paste your output here
+### Output:
+
+![26](https://github.com/user-attachments/assets/a0ea682e-916b-4a82-bc6d-9d5cfa747bdf)
 
 
-Result:
+
+### Result:
 Thus, the program to display stack elements using linked list is verified successfully. 
 
 
 
-EXP.NO 27: C PROGRAM TO POP AN ELEMENT FROM THE GIVEN STACK USING 
+## EXP.NO 27: C PROGRAM TO POP AN ELEMENT FROM THE GIVEN STACK USING 
 LINKED LIST.
-Aim:
+
+### Aim:
 To write a C program to pop an element from the given stack using liked list.
 
-Algorithm:
+### Algorithm:
 1.	Check for Empty Stack
 2.	If head is equal to NULL, Print "Stack is empty."
 3.	Else Proceed to the next step.
 4.	Set head to point to the next node in the stack.
  
-Program:
+### Program:
 
-//type your code here
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void enqueue(int data)
+{
+    struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
+    temp->data=data;
+    temp->next=NULL;
+    if(front==NULL)
+    {
+       front=temp;
+       rear=temp;
+       return;
+    }
+    rear->next=temp;
+    rear=temp;
+}
+
+```
 
 Output:
 
